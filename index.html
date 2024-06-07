@@ -1,0 +1,142 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <title>자기소개 웹 사이트</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- 부트스트랩 CSS 추가하기 -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- 커스텀 CSS 추가하기 -->
+    <link rel="stylesheet" href="./css/custom.css">
+    <script defer src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+      body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+      }
+      .guestbook {
+          max-width: 600px;
+          margin: 0 auto;
+      }
+      .guestbook-form {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+      }
+      .guestbook-form input, .guestbook-form textarea {
+          margin-bottom: 10px;
+          padding: 10px;
+          font-size: 16px;
+      }
+      .guestbook-form button {
+          padding: 10px;
+          font-size: 16px;
+          cursor: pointer;
+      }
+      .guestbook-entries {
+          list-style-type: none;
+          padding: 0;
+      }
+      .guestbook-entry {
+          padding: 10px;
+          border: 1px solid #ddd;
+          margin-bottom: 10px;
+          border-radius: 5px;
+      }
+  </style>
+  </head>
+  <body>
+    <div id="home"/>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">문창원</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="#home" class="nav-link">메인</a>
+            </li>
+            <li class="nav-item">
+              <a href="#career" class="nav-link">경력 희망사항</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="container mt-5">
+      <div class="text-center">
+        <img src="./img/profile.jpg" class="img-fluid mb-3 rounded-circle mt-5">
+        <h2>문창원</h2>
+        <img src="./img/box.svg" class="img-fluid mr-1">프로그래머
+        <img src="./img/anchor.svg" class="img-fluid mr-1">교육자
+        <img id="career" src="./img/book.svg" class="img-fluid mr-1">작가
+      </div>
+    </section>
+    <section class="bg-white text-dark mt-5 mb-3 pt-5 pb-4">
+      <div class="text-center">
+        <div class="container text-left mb-5" style="max-width: 480px;">
+          <h2>수상 경력 희망</h2>
+          <ul>
+            <li>대한민국 인재상 100인 선정</li>
+            <li>MIDAS Challenge 우승</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="mt-5">연락처</h2>
+              <div class="p-3 align-self-end" style="text-align: justify">
+                010-4209-9959
+              </div>
+              <h2 class="mt-5">방명록</h2>
+              <div class="guestbook">
+                <form class="guestbook-form" id="guestbook-form">
+                    <input type="text" id="name" placeholder="Your name" required>
+                    <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+                    <button type="submit">Add Entry</button>
+                </form>
+                <ul class="guestbook-entries" id="guestbook-entries"></ul>
+              </div>
+              <h2 class="mt-5">이메일</h2>
+            <div class="d-flex flex-row">
+              <div class="p-3 align-self-start">
+                <img src="./img/check.svg">
+              </div>
+              <div class="p-3 align-self-end" style="text-align: justify">
+                이메일: ansckddnjs170@naver.com
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center bg-dark text-white">
+        <div class="footer-above">
+            <div class="container pt-4">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3 style="color: white;">위치</h3>
+                        <p>광운대학교
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3 style="color: white;">문창원</h3>
+                        <p>소통하는 개발자가 되겠습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 제이쿼리 자바스크립트 추가하기 -->
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <!-- Popper 자바스크립트 추가하기 -->
+    <script src="./js/popper.min.js"></script>
+    <!-- 부트스트랩 자바스크립트 추가하기 -->
+    <script src="./js/bootstrap.min.js"></script>
+  </body>
+</html>
